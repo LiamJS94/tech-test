@@ -1,9 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
 
+#topright{
+  position:fixed;
+  left:333px;
+  background-color: blue;
+  height: 75px;
+  width: 75px;
+}
 
-<!-- <img src="/media/5014-Falkirk_FK2_9XQ-Innocent-Tesco.jpg" height=400 width=400 class="img-fluid mb-2"> -->
-{% for photo in photos %}
+#pictureholder {
+  height: 500px;
+  width: 400px;
+}
+
+.hide {
+  display: none;
+}
+    
+.picture:hover + .hide {
+  display: block;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+  <div id="topright">
+  </div>
+
+  <div id="pictureholder" class="picture">
+    <img  src="/mysite/media/ASDAARNOLD_ASD4915_1.jpg" height=500 width=400>
+  </div>
+
+<div class="hide">
 <h1>{{ photo.image.name }}</h1>
 <h2>{{ photo.takenBy }}</h2>
-<h2>{{ photo.dateTaken }}</h2>
-  <img src="{{ photo.image.url}}" height=800 width=800 class="img-fluid mb-2">
-{% endfor %}
+<h2>{{ approvedDate }}</h2>
+<h2>{{ photo.dateTaken }}</h2>.
+</div>
+
+</body>
+</html>
